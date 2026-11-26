@@ -1,8 +1,12 @@
 :root {
   color-scheme: light;
+  --logo-white: #fefefe;
+  --logo-black: #000000;
+  --logo-gold: #c48d32;
+  --logo-light-gold: #f7ca77;
   font-family: "Noto Sans Myanmar", "Myanmar Text", "Myanmar Sangam MN", system-ui, sans-serif;
-  color: #fff9f2;
-  background: #f4f0f9;
+  color: var(--logo-black);
+  background: var(--logo-white);
 }
 
 * {
@@ -23,46 +27,24 @@ main {
 
 .card {
   padding: 2.25rem 1.75rem;
+  border: 1px solid var(--logo-gold);
   border-radius: 1.75rem;
   text-align: center;
-  background: radial-gradient(ellipse at 90% 10%, #503376, transparent 68%), #1c133a;
-  box-shadow: 0 18px 42px rgba(28, 19, 58, 0.22);
+  background: var(--logo-white);
 }
 
 .logo {
   display: block;
   margin: 0 auto 1rem;
   border-radius: 1.25rem;
-  background: #fffaf2;
-  padding: 0.25rem;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2rem;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  max-width: 100%;
+  height: auto;
 }
 
 .version {
   margin: 0.45rem 0 1.75rem;
-  color: #f3d494;
   font-size: 0.95rem;
   font-weight: 600;
-}
-
-.actions {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.update-help {
-  margin: 1rem 0 0;
-  color: #e9dff5;
-  font-size: 0.9rem;
-  line-height: 1.8;
-  text-align: start;
 }
 
 .btn {
@@ -72,6 +54,8 @@ h1 {
   min-height: 3.1rem;
   padding: 0.75rem 1.15rem;
   border-radius: 0.9rem;
+  background: var(--logo-light-gold);
+  color: var(--logo-black);
   font-size: 0.98rem;
   font-weight: 700;
   text-decoration: none;
@@ -82,26 +66,11 @@ h1 {
   transform: scale(0.985);
 }
 
-.btn.primary {
-  background: #f1d08c;
-  color: #281936;
-}
-
-.btn.primary:hover {
-  background: #ffe3aa;
-}
-
-.btn.secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff9f2;
-  border: 1px solid rgba(241, 208, 140, 0.45);
-}
-
-.btn.secondary:hover {
-  background: rgba(255, 255, 255, 0.18);
+.btn:hover {
+  background: var(--logo-gold);
 }
 
 :focus-visible {
-  outline: 3px solid #ad6de7;
+  outline: 3px solid var(--logo-black);
   outline-offset: 3px;
 }
