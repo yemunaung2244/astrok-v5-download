@@ -1,0 +1,12 @@
+[build]
+  publish = "public"
+  edge_functions = "edge-functions"
+
+[[edge_functions]]
+  function = "download"
+  path = "/download/*"
+
+[[headers]]
+  for = "/android-update.json"
+  [headers.values]
+    Cache-Control = "no-store"
